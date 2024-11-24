@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource-variable/jost": "^5.1.1",
     "@fontsource/bebas-neue": "^5.1.0",
     "@gsap/react": "^2.1.1",
     "gsap": "^3.12.5",

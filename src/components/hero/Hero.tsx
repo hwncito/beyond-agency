@@ -77,17 +77,17 @@ export default function Hero() {
       <Preload />
       <div
         className="flex flex-col items-center justify-center mt-28"
-        style={{ fontFamily: 'Bebas Neue' }}
       >
         <div className="overflow-hidden leading-none">
           <h1
             id="hero-title"
             className="text-8xl tracking-widest font-bold translate-y-full"
+            style={{ fontFamily: 'Bebas Neue' }}
           >
             Explore & Beyond
           </h1>
         </div>
-        <div className="overflow-hidden leading-none my-6">
+        <div className="overflow-hidden leading-none mt-6 mb-8">
           <h2
             id="hero-subtitle"
             className="text-4xl tracking-wide translate-y-full"
@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
         <button
           id="hero-button"
-          className="text-3xl border rounded-lg px-4 py-2 cursor-pointer hover:bg-white hover:text-black transition-colors translate-y-full opacity-0"
+          className="text-2xl border-2 rounded-lg px-4 py-2 cursor-pointer hover:bg-white hover:text-black transition-colors translate-y-full opacity-0"
         >
           Plan your trip
         </button>
