@@ -46,16 +46,22 @@ export default function Living() {
             y: 0,
             transformOrigin: 'top',
             duration: 1,
-            stagger: 0.05,
+            stagger: 0.03,
           }
         );
         tl.set('.animated-text', { visibility: 'visible' }, '<');
+        tl.to('#living-button', {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          ease: 'power3.out',
+        }, '<+=1.5');
         tl.to('#cross-text', {
           width: '360px',
           opacity: 1,
           duration: 2,
-          ease: 'power3.out',
-        })
+          ease: 'power1.out',
+        }, '<+=0.5');
       }
     };
 
@@ -86,7 +92,9 @@ export default function Living() {
 
       <div id="living-text" className="w-full pl-8 flex flex-col">
         <ul className="relative text-6xl space-y-6">
-          <li>Use your time</li>
+          <li className="animated-text" style={{ visibility: 'hidden' }}>
+            Use your time
+          </li>
           <li
             className="animated-text text-[#1D545E]"
             style={{ visibility: 'hidden' }}
@@ -104,7 +112,7 @@ export default function Living() {
         <Button
           id="living-button"
           label="Start living"
-          className="self-start mt-10 border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white"
+          className="self-start mt-10 border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white translate-y-full opacity-0"
         />
       </div>
     </section>
