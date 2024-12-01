@@ -1,17 +1,12 @@
-import Image from 'next/image';
+import '@fontsource/bebas-neue';
 import Button from '../ui/Button';
 
 export default function Card() {
   return (
-    <div className="flex">
-      <div className="flex flex-col">
-        <h3>Title</h3>
-        <p>Descritpion</p>
-        <Button id="loco" label="Button" className="border-red-600" />
-      </div>
-      <div>
-        <Image src="/boat.webp" alt="boat" width={200} height={200} />
-      </div>
+    <div id='card' className="min-h-screen flex flex-col justify-center gap-8">
+      <h3 className='text-6xl tracking-wide' style={{ fontFamily: 'Bebas Neue' }}>Dive Into Serenity </h3>
+      <p className='text-4xl tracking-wide text-balance'>Explore the World's Most Breathtaking Beaches</p>
+      <Button id="loco" label="Dive now" className="border-gray-600 self-start" />
     </div>
   );
 }
