@@ -8,6 +8,8 @@ export default function Home() {
       <Hero />
       <Living />
       <Explore />
+      <section className="bg-white h-screen">
+      </section>
     </>
   );
 }
