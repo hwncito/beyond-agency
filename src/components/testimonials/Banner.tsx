@@ -1,22 +1,43 @@
+'use client';
+import { useEffect } from 'react';
 import Message from './Message';
+import gsap from 'gsap';
 
 interface BannerProps {
+  id: string;
   data: { quote: string; author: string; role: string }[];
 }
 
-export default function Banner({ data }: BannerProps) {
+export default function Banner({ id, data }: BannerProps) {
+  useEffect(() => {
+    const bannerContainer = document.getElementById(id);
+    if (!bannerContainer) return;
+
+    const totalWidth = bannerContainer.scrollWidth / 3;
+
+    const tl = gsap.timeline({
+      repeat: -1,
+    });
+
+    const isBannerOne = id === 'scroll-container-one';
+
+    tl.to(bannerContainer, {
+      x: isBannerOne ? -totalWidth : totalWidth,
+      duration: 30,
+      ease: 'none',
+    });
+
+    bannerContainer.addEventListener('mouseenter', () => tl.pause());
+    bannerContainer.addEventListener('mouseleave', () => tl.play());
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
-    <div className="flex gap-5 overflow-x-hidden relative">
-      <div className="absolute inset-0 w-screen h-full pointer-events-none z-10 mx-auto">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(90deg, rgb(249, 250, 251) 0%, rgba(249, 250, 251, 0) 20%, rgba(249, 250, 251, 0) 80%, rgb(249, 250, 251) 100%)',
-          }}
-        />
-      </div>
-      {data.map((testimonial, index) => {
+    <div id={id} className="relative flex gap-5">
+      {[...data, ...data, ...data].map((testimonial, index) => {
         const { quote, author, role } = testimonial;
         return (
           <Message key={index} quote={quote} author={author} role={role} />

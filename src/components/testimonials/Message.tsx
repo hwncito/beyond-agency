@@ -23,7 +23,7 @@ export default function Message({ quote, author, role }: MessageProps) {
     </svg>
   );
   return (
-    <div className="flex flex-col py-5 px-6 rounded-2xl bg-[#F0F9FD] text-black w-[434px]">
+    <div className="flex flex-col py-5 px-6 rounded-2xl shadow-md bg-[#F0F9FD] text-black w-[434px]">
       {quoteIcon}
       <p className="text-2xl mt-2 mb-3">{quote}</p>
       <span className="font-medium text-xl">{author}</span>
