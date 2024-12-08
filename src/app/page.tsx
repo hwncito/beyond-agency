@@ -1,6 +1,7 @@
 import Living from "@/components/living/Living";
 import Hero from "@/components/hero/Hero";
 import Explore from "@/components/explore/Explore";
+import Testimonials from "@/components/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -8,8 +9,7 @@ export default function Home() {
       <Hero />
       <Living />
       <Explore />
-      <section className="bg-white h-screen">
-      </section>
+      <Testimonials />
     </>
   );
 }
