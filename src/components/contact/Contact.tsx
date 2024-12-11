@@ -8,7 +8,7 @@ export default function Contact() {
     <section className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40">
       <div className="flex flex-col items-center basis-1/2">
         <div className='flex flex-col items-start'>
-          <Heading title="Contact" className="text-6xl tracking-wide" />
+          <Heading id='contact-heading' containerId='contact-container' title="Contact" className="text-6xl tracking-wide" />
           <p className="text-5xl tracking-wide mt-6">Any questions?</p>
           <p className="text-5xl tracking-wide mt-3">Get in touch with</p>
           <p className="text-5xl tracking-wide text-[#116080] mt-3">our team<span className='text-black'>.</span></p>
