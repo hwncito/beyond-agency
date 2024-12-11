@@ -10,6 +10,29 @@ import gsap from 'gsap';
 
 export default function Contact() {
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const imageCover = document.getElementById('contact-image-cover');
+
+    // Animate the image cover
+    const animateCover = () => {
+      gsap.to(imageCover, {
+        height: 0,
+        duration: 2,
+        ease: 'power3.out',
+      });
+    };
+
+    ScrollTrigger.create({
+      trigger: imageCover,
+      start: 'top 90%',
+      onEnter: animateCover,
+      toggleActions: 'play none none none',
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
     const question = document.getElementById('question-text');
     const answer = document.getElementsByClassName('answer-text');
@@ -20,15 +43,20 @@ export default function Contact() {
       tl.to(question, {
         duration: 1,
         text: 'Any questions?',
-      }).to(answer, {
-        opacity: 1,
-        duration: 1,
       })
-      .to(button, {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-      }, '<+=0.3')
+        .to(answer, {
+          opacity: 1,
+          duration: 1,
+        })
+        .to(
+          button,
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+          },
+          '<+=0.3'
+        );
 
       return tl;
     };
@@ -60,14 +88,18 @@ export default function Contact() {
               <span className="answer-text text-black">.</span>
             </p>
           </div>
-            <Button
-              id="contact-button"
-              label="Contact us"
-              className="translate-y-full opacity-0 mt-7 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
-            />
+          <Button
+            id="contact-button"
+            label="Contact us"
+            className="translate-y-full opacity-0 mt-7 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
+          />
         </div>
       </div>
-      <div className="basis-1/2 flex justify-center">
+      <div className="relative basis-1/2 flex justify-center">
+        <div
+          id="contact-image-cover"
+          className="absolute top-0 bg-white w-full h-full"
+        ></div>
         <Image
           src={'/contact-signs.webp'}
           alt="Contact signs"
