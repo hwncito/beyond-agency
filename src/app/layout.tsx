@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ReactLenis } from 'lenis/react';
 import './globals.css';
 import '@fontsource-variable/jost';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Explore & Beyond',
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <ReactLenis root>
       <html lang="en">
-        <body className="antialiased">{children}</body>
+        <body className="antialiased">
+          {children}
+          <Footer />
+        </body>
       </html>
     </ReactLenis>
   );
