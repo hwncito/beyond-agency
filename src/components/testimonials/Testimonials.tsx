@@ -5,7 +5,7 @@ import { testimonialsOne, testimonialsTwo } from './testimonials.data';
 
 export default function Testimonials() {
   return (
-    <section className="h-screen flex flex-col gap-5 items-center justify-center mx-auto overflow-x-hidden">
+    <section id='testimonials-section' className="h-screen flex flex-col gap-5 items-center justify-center mx-auto overflow-x-hidden">
       <div className="mb-1">
         <Heading id='testimonial-heading' containerId='testimonials-container' title="Testimonials" className="text-center tracking-wider" />
       </div>

@@ -69,7 +69,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40 mb-20">
+    <section id='contact-section' className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40 mb-20">
       <div className="flex flex-col items-center basis-1/2">
         <div className="flex flex-col items-start">
           <Heading
