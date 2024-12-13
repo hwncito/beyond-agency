@@ -85,9 +85,9 @@ export default function Living() {
   return (
     <section
       id="living-section"
-      className="py-20 h-screen flex justify-between items-center gap-8 mx-8"
+      className="py-20 h-screen flex justify-between items-center gap-8 mx-auto max-w-screen-2xl"
     >
-      <div className="relative w-full max-w-[600px]">
+      <div className="relative w-full max-w-[600px] mx-8">
         <div
           id="image-cover"
           className="absolute top-0 bg-white w-full h-full"

@@ -93,7 +93,7 @@ export default function Hero() {
         <div className="overflow-hidden leading-none mt-6 mb-8">
           <h2
             id="hero-subtitle"
-            className="text-4xl tracking-wide translate-y-full"
+            className="text-4xl tracking-wide translate-y-full leading-normal"
           >
             Your Gateway to Unforgettable Journeys.
           </h2>
