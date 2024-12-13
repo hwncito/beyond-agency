@@ -69,7 +69,10 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id='contact-section' className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40 mb-20">
+    <section
+      id="contact-section"
+      className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40 mb-20"
+    >
       <div className="flex flex-col items-center basis-1/2">
         <div className="flex flex-col items-start">
           <Heading
@@ -88,11 +91,16 @@ export default function Contact() {
               <span className="answer-text text-black">.</span>
             </p>
           </div>
-          <Button
-            id="contact-button"
-            label="Contact us"
-            className="translate-y-full opacity-0 mt-7 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
-          />
+          <a
+            href="https://www.linkedin.com/in/juan-marcos-speroni/"
+            target="_blank"
+          >
+            <Button
+              id="contact-button"
+              label="Contact us"
+              className="translate-y-full opacity-0 mt-7 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
+            />
+          </a>
         </div>
       </div>
       <div className="relative basis-1/2 flex justify-center">

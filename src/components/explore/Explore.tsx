@@ -14,7 +14,7 @@ export default function Explore() {
         heading: 'text-[#116080]',
         button: {
           id: 'explore-button',
-          label: 'Explore Now',
+          label: 'Explore now',
           className: 'border-[#116080] hover:bg-[#116080] hover:text-white',
         },
       },
@@ -26,7 +26,7 @@ export default function Explore() {
         heading: 'text-[#CB8B57]',
         button: {
           id: 'discover-button',
-          label: 'Discover Now',
+          label: 'Discover now',
           className: 'border-[#CB8B57] hover:bg-[#CB8B57] hover:text-white',
         },
       },
@@ -38,7 +38,7 @@ export default function Explore() {
         heading: 'text-[#346032]',
         button: {
           id: 'immerse-button',
-          label: 'Immerse Now',
+          label: 'Immerse now',
           className: 'border-[#346032] hover:bg-[#346032] hover:text-white',
         },
       },
@@ -50,7 +50,7 @@ export default function Explore() {
         heading: 'text-[#61737E]',
         button: {
           id: 'experience-button',
-          label: 'Experience Now',
+          label: 'Experience now',
           className: 'border-[#61737E] hover:bg-[#61737E] hover:text-white',
         },
       },

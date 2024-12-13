@@ -74,7 +74,7 @@ export default function Hero() {
   return (
     <main
       className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center text-white"
-      id='top-page'
+      id="top-page"
       style={{
         backgroundImage: 'url(/ny-bright.webp)',
       }}
@@ -98,11 +98,13 @@ export default function Hero() {
             Your Gateway to Unforgettable Journeys.
           </h2>
         </div>
-        <Button
-          id="hero-button"
-          label="Plan your trip"
-          className="hover:bg-white hover:text-black translate-y-full opacity-0"
-        />
+        <a href="https://www.linkedin.com/in/juan-marcos-speroni/" target='_blank'>
+          <Button
+            id="hero-button"
+            label="Plan your trip"
+            className="hover:bg-white hover:text-black translate-y-full opacity-0"
+          />
+        </a>
       </div>
     </main>
   );

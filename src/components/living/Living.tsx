@@ -50,18 +50,26 @@ export default function Living() {
           }
         );
         tl.set('.animated-text', { visibility: 'visible' }, '<');
-        tl.to('#living-button', {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          ease: 'power3.out',
-        }, '<+=1.5');
-        tl.to('#cross-text', {
-          width: '360px',
-          opacity: 1,
-          duration: 2,
-          ease: 'power1.out',
-        }, '<+=0.5');
+        tl.to(
+          '#living-button',
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.5,
+            ease: 'power3.out',
+          },
+          '<+=1.5'
+        );
+        tl.to(
+          '#cross-text',
+          {
+            width: '360px',
+            opacity: 1,
+            duration: 2,
+            ease: 'power1.out',
+          },
+          '<+=0.5'
+        );
       }
     };
 
@@ -75,7 +83,10 @@ export default function Living() {
   }, []);
 
   return (
-    <section id='living-section' className="py-20 h-screen flex justify-between items-center gap-8 mx-8">
+    <section
+      id="living-section"
+      className="py-20 h-screen flex justify-between items-center gap-8 mx-8"
+    >
       <div className="relative w-full max-w-[600px]">
         <div
           id="image-cover"
@@ -109,11 +120,16 @@ export default function Living() {
             className="absolute bottom-5 w-[0px] border-2 border-gray-500 opacity-0"
           ></div>
         </ul>
-        <Button
-          id="living-button"
-          label="Start living"
-          className="self-start mt-10 border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white translate-y-full opacity-0"
-        />
+        <a
+          href="https://www.linkedin.com/in/juan-marcos-speroni/"
+          target="_blank"
+        >
+          <Button
+            id="living-button"
+            label="Start living"
+            className="self-start mt-10 border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white translate-y-full opacity-0"
+          />
+        </a>
       </div>
     </section>
   );

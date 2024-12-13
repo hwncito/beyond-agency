@@ -7,7 +7,7 @@ export default function Footer() {
       className="relative h-[675px] bg-[#0F7FA2] flex items-center justify-center"
     >
       <div className="fixed bottom-0 h-[675px] w-full grid grid-cols-12 text-white uppercase pt-20 px-20 text-lg max-w-screen-2xl">
-        <div className="col-span-2 flex flex-col gap-2">
+        <div className="col-span-2 flex flex-col gap-3">
           <a href="#top-page" className="hover:underline">
             Back to the top
           </a>

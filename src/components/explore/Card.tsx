@@ -57,11 +57,16 @@ export default function Card({ title, description, classes }: CardProps) {
       <p className="text-4xl tracking-wide text-balance text-gray-700">
         {description}
       </p>
-      <Button
-        id={button.id}
-        label={button.label}
-        className={`text-gray-700 self-start ${button.className}`}
-      />
+      <a
+        href="https://www.linkedin.com/in/juan-marcos-speroni/"
+        target="_blank"
+      >
+        <Button
+          id={button.id}
+          label={button.label}
+          className={`text-gray-700 self-start ${button.className}`}
+        />
+      </a>
     </div>
   );
 }

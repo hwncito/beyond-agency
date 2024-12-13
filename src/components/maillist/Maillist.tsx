@@ -26,7 +26,7 @@ export default function Maillist() {
             duration: 1,
             stagger: 0.04,
           }
-        )
+        );
         tl.to(
           '#maillist-button',
           {
@@ -65,11 +65,16 @@ export default function Maillist() {
         >
           Be the first to discover exclusive deals
         </h2>
-        <Button
-          id="maillist-button"
-          label="Subscribe"
-          className="mt-10 text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
-        />
+        <a
+          href="https://www.linkedin.com/in/juan-marcos-speroni/"
+          target="_blank"
+        >
+          <Button
+            id="maillist-button"
+            label="Subscribe"
+            className="mt-10 text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
+          />
+        </a>
       </div>
     </section>
   );
