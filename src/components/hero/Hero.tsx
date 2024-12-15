@@ -1,6 +1,5 @@
 'use client';
 import '@fontsource/bebas-neue';
-import './Hero.css';
 import Preload from '../preload/Preload';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';

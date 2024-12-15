@@ -27,6 +27,18 @@ export default function Living() {
       once: true,
     });
 
+    // Get with of cross text
+    const getCrossTextWidth = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 1024) {
+        return '220px';
+      } else {
+        return '360px';
+      }
+    };
+
+    let crossTextAnimation;
     // Animate the text
     const animateText = () => {
       const text = new SplitType('.animated-text', { types: 'chars' });
@@ -60,10 +72,10 @@ export default function Living() {
           },
           '<+=1.5'
         );
-        tl.to(
+        crossTextAnimation = tl.to(
           '#cross-text',
           {
-            width: '360px',
+            width: getCrossTextWidth(),
             opacity: 1,
             duration: 2,
             ease: 'power1.out',
@@ -80,12 +92,27 @@ export default function Living() {
       toggleActions: 'play none none none',
       once: true,
     });
+
+    // Recreate cross-text animation when changing screen size
+    const handleResize = () => {
+      gsap.to('#cross-text', {
+        width: getCrossTextWidth(),
+        duration: 0.5,
+        ease: 'power1.out',
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
     <section
       id="living-section"
-      className="py-20 h-screen flex justify-between items-center gap-8 mx-auto max-w-screen-2xl"
+      className="py-10 md:py-20 md:h-screen flex flex-col md:flex-row md:justify-between items-center gap-8 md:gap-2 lg:gap-0 xl:gap-8 mx-auto max-w-screen-2xl"
     >
       <div className="relative w-full max-w-[600px] mx-8">
         <div
@@ -93,7 +120,7 @@ export default function Living() {
           className="absolute top-0 bg-white w-full h-full"
         ></div>
         <Image
-          className="rounded-3xl"
+          className="md:rounded-3xl max-h-80 object-cover md:max-h-full"
           src={'/boat.webp'}
           alt="Boat in the middle of the sea"
           width={600}
@@ -101,14 +128,14 @@ export default function Living() {
         />
       </div>
 
-      <div id="living-text" className="w-full pl-8 flex flex-col">
-        <ul className="relative text-6xl space-y-6">
+      <div id="living-text" className="w-full pl-8 md:pl-4 lg:pl-2 xl:pl-8 flex flex-col">
+        <ul className="relative text-4xl lg:text-6xl space-y-6 w-full">
           <li className="animated-text" style={{ visibility: 'hidden' }}>
             Use your time
           </li>
           <li
-            className="animated-text text-[#1D545E]"
-            style={{ visibility: 'hidden' }}
+            className="animated-text text-[#1D545E] text-balance break-keep"
+            style={{ visibility: 'hidden', }}
           >
             living your vacation,
           </li>
@@ -117,12 +144,13 @@ export default function Living() {
           </li>
           <div
             id="cross-text"
-            className="absolute bottom-5 w-[0px] border-2 border-gray-500 opacity-0"
+            className="absolute bottom-[14px] lg:bottom-5 w-[0px] border-2 border-gray-500 opacity-0"
           ></div>
         </ul>
         <a
           href="https://www.linkedin.com/in/juan-marcos-speroni/"
           target="_blank"
+          className='self-start'
         >
           <Button
             id="living-button"
