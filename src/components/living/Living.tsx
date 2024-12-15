@@ -38,7 +38,6 @@ export default function Living() {
       }
     };
 
-    let crossTextAnimation;
     // Animate the text
     const animateText = () => {
       const text = new SplitType('.animated-text', { types: 'chars' });
@@ -72,7 +71,7 @@ export default function Living() {
           },
           '<+=1.5'
         );
-        crossTextAnimation = tl.to(
+        tl.to(
           '#cross-text',
           {
             width: getCrossTextWidth(),

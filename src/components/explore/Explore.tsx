@@ -68,7 +68,7 @@ export default function Explore() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
     const images = gsap.utils.toArray('.card-image:not(:first-child)');
 
     mm.add('(min-width: 640px)', () => {
