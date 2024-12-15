@@ -52,7 +52,7 @@ export default function Maillist() {
   return (
     <section className="flex items-center justify-center my-20">
       <div
-        className="w-full max-w-screen-2xl mx-10 h-72 flex flex-col items-center justify-center rounded-xl"
+        className="w-full max-w-screen-2xl md:mx-10 h-60 md:h-72 flex flex-col items-center justify-center rounded-xl"
         style={{
           backgroundImage: 'url(/ferry.webp)',
           backgroundSize: 'cover',
@@ -61,9 +61,9 @@ export default function Maillist() {
       >
         <h2
           id="deals-text"
-          className="deals-text text-6xl tracking-wide text-white"
+          className="deals-text text-4xl sm:text-5xl md:text-6xl tracking-wide text-white text-center text-balance break-keep"
         >
-          Be the first to discover exclusive deals
+          Be the first to know about exclusive deals
         </h2>
         <a
           href="https://www.linkedin.com/in/juan-marcos-speroni/"
@@ -73,7 +73,7 @@ export default function Maillist() {
           <Button
             id="maillist-button"
             label="Subscribe"
-            className="text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
+            className="text-2xl sm:text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
           />
         </a>
       </div>
