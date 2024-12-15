@@ -1,0 +1,8 @@
+<svg width="10" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .svg-path { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+      .svg-path { fill: #fff; }
+    }
+  </style>
+<path class="svg-path" d="M0 0h10L9 2H2.313v4H6L5 8H2.313v5H10l-1 2H0V0Z"/></svg>
