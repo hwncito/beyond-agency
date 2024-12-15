@@ -89,10 +89,10 @@ export default function Hero() {
             Explore & Beyond
           </h1>
         </div>
-        <div className="overflow-hidden leading-none mt-6 mb-8">
+        <div className="overflow-hidden leading-normal mt-6 mb-8">
           <h2
             id="hero-subtitle"
-            className="text-3xl md:text-4xl tracking-wide translate-y-full leading-normal text-center text-balance"
+            className="text-3xl md:text-4xl tracking-wide translate-y-full text-center text-balance pb-1"
           >
             Your Gateway to Unforgettable Journeys.
           </h2>
