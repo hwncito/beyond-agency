@@ -18,6 +18,8 @@ export default function Explore() {
           className: 'border-[#116080] hover:bg-[#116080] hover:text-white',
         },
       },
+      image: '/beach.webp',
+      altImage: 'boats in a beautiful beach',
     },
     {
       title: 'Reach New Heights',
@@ -30,6 +32,8 @@ export default function Explore() {
           className: 'border-[#CB8B57] hover:bg-[#CB8B57] hover:text-white',
         },
       },
+      image: '/dunes.webp',
+      altImage: 'dunes in the desert',
     },
     {
       title: 'Embrace the Wild',
@@ -42,6 +46,8 @@ export default function Explore() {
           className: 'border-[#346032] hover:bg-[#346032] hover:text-white',
         },
       },
+      image: '/forest.webp',
+      altImage: 'top view of a forest',
     },
     {
       title: 'Journey to the Edge',
@@ -54,61 +60,69 @@ export default function Explore() {
           className: 'border-[#61737E] hover:bg-[#61737E] hover:text-white',
         },
       },
+      image: '/mountain.webp',
+      altImage: 'mountain landscape',
     },
   ];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    let mm = gsap.matchMedia();
     const images = gsap.utils.toArray('.card-image:not(:first-child)');
 
-    gsap.set(images, {
-      yPercent: 101,
-    });
+    mm.add('(min-width: 640px)', () => {
+      gsap.set(images, {
+        yPercent: 101,
+      });
 
-    const animateCards = gsap.to(images, {
-      yPercent: 0,
-      duration: 1,
-      stagger: 1,
-    });
+      const animateCards = gsap.to(images, {
+        yPercent: 0,
+        duration: 1,
+        stagger: 1,
+      });
 
-    ScrollTrigger.create({
-      trigger: '#explore-section',
-      start: 'top top',
-      end: 'bottom bottom',
-      pin: '#images-container-wrapper',
-      animation: animateCards,
-      scrub: true,
+      ScrollTrigger.create({
+        trigger: '#explore-section',
+        start: 'top top',
+        end: 'bottom bottom',
+        pin: '#images-container-wrapper',
+        animation: animateCards,
+        scrub: true,
+      });
     });
   }, []);
 
   return (
     <section
       id="explore-section"
-      className="flex justify-center"
+      className="flex flex-col md:flex-row justify-center"
       style={{
         background:
           'linear-gradient(109.6deg, rgb(243, 249, 252) 11.2%, rgb(251, 253, 254) 100.2%)',
       }}
     >
-      <div id="cards-container-wrapper" className="w-1/2">
-        <div id="cards-container" className="mx-auto w-9/12 xl:w-8/12">
+      <div id="cards-container-wrapper" className="w-full md:w-1/2">
+        <div id="cards-container" className="mx-8 md:mx-auto w-9/12 xl:w-8/12">
           {cardsContent.map((card, index) => {
-            const { title, description, classes } = card;
+            const { title, description, classes, image, altImage } = card;
             return (
               <Card
                 key={index}
                 title={title}
                 description={description}
                 classes={classes}
+                image={image}
+                altImage={altImage}
               />
             );
           })}
         </div>
       </div>
+
       <div
         id="images-container-wrapper"
-        className="h-screen w-1/2 flex flex-col justify-center"
+        className="h-screen w-1/2 hidden md:flex flex-col justify-center"
       >
         <div
           id="images-container"

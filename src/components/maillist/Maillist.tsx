@@ -68,11 +68,12 @@ export default function Maillist() {
         <a
           href="https://www.linkedin.com/in/juan-marcos-speroni/"
           target="_blank"
+          className='mt-10'
         >
           <Button
             id="maillist-button"
             label="Subscribe"
-            className="mt-10 text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
+            className="text-3xl px-6 py-3 text-white border-white hover:bg-white hover:text-black opacity-0 translate-y-full"
           />
         </a>
       </div>

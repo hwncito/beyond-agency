@@ -94,11 +94,12 @@ export default function Contact() {
           <a
             href="https://www.linkedin.com/in/juan-marcos-speroni/"
             target="_blank"
+            className='mt-7'
           >
             <Button
               id="contact-button"
               label="Contact us"
-              className="translate-y-full opacity-0 mt-7 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
+              className="translate-y-full opacity-0 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
             />
           </a>
         </div>

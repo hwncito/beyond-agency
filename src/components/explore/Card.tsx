@@ -4,6 +4,7 @@ import Button from '../ui/Button';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 interface CardProps {
   title: string;
@@ -16,9 +17,17 @@ interface CardProps {
       className: string;
     };
   };
+  image: string;
+  altImage: string;
 }
 
-export default function Card({ title, description, classes }: CardProps) {
+export default function Card({
+  title,
+  description,
+  classes,
+  image,
+  altImage,
+}: CardProps) {
   const { heading, button } = classes;
 
   useEffect(() => {
@@ -49,12 +58,13 @@ export default function Card({ title, description, classes }: CardProps) {
   return (
     <div className="card-text min-h-screen flex flex-col justify-center gap-8">
       <h3
-        className={`text-6xl tracking-wide ${heading}`}
+        className={`text-5xl md:text-6xl tracking-wide ${heading}`}
         style={{ fontFamily: 'Bebas Neue' }}
       >
         {title}
       </h3>
-      <p className="text-4xl tracking-wide text-balance text-gray-700">
+      <Image src={image} alt={altImage} width={1920} height={0} className='rounded-2xl md:hidden' />
+      <p className="text-3xl md:text-4xl tracking-wide text-pretty md:text-balance text-gray-700">
         {description}
       </p>
       <a

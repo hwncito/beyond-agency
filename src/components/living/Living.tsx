@@ -150,12 +150,12 @@ export default function Living() {
         <a
           href="https://www.linkedin.com/in/juan-marcos-speroni/"
           target="_blank"
-          className='self-start'
+          className='self-start mt-10'
         >
           <Button
             id="living-button"
             label="Start living"
-            className="self-start mt-10 border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white translate-y-full opacity-0"
+            className="self-start border-[#1D545E] text-[#1D545E] hover:bg-[#1D545E] hover:text-white translate-y-full opacity-0"
           />
         </a>
       </div>
