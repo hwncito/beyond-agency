@@ -71,22 +71,25 @@ export default function Contact() {
   return (
     <section
       id="contact-section"
-      className="h-screen flex items-center mx-auto max-w-screen-2xl mt-40 mb-20"
+      className="md:h-screen flex flex-col md:flex-row items-center gap-10 md:gap-0 mx-auto max-w-screen-2xl mt-10 md:mt-40 mb-20"
     >
       <div className="flex flex-col items-center basis-1/2">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start ml-10">
           <Heading
             id="contact-heading"
             containerId="contact-container"
             title="Contact"
-            className="text-6xl tracking-wide"
+            className="md:text-6xl tracking-wide"
           />
-          <div id="question-answer-container" className="w-[370px] h-[194px]">
-            <p id="question-text" className="text-5xl tracking-wide mt-6"></p>
-            <p className="answer-text text-5xl tracking-wide mt-3 opacity-0">
+          <div
+            id="question-answer-container"
+            className="text-4xl md:text-5xl w-[370px] h-[194px]"
+          >
+            <p id="question-text" className=" tracking-wide mt-6"></p>
+            <p className="answer-text tracking-wide mt-3 opacity-0">
               Get in touch with
             </p>
-            <p className="answer-text text-5xl tracking-wide text-[#116080] mt-3 opacity-0">
+            <p className="answer-text tracking-wide text-[#116080] mt-3 opacity-0">
               our team
               <span className="answer-text text-black">.</span>
             </p>
@@ -94,17 +97,17 @@ export default function Contact() {
           <a
             href="https://www.linkedin.com/in/juan-marcos-speroni/"
             target="_blank"
-            className='mt-7'
+            className="mt-1 md:mt-7"
           >
             <Button
               id="contact-button"
               label="Contact us"
-              className="translate-y-full opacity-0 tracking-wide text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
+              className="translate-y-full opacity-0 tracking-wide text-2xl md:text-3xl border-[#116080] text-[#116080] hover:bg-[#116080] hover:text-white"
             />
           </a>
         </div>
       </div>
-      <div className="relative basis-1/2 flex justify-center">
+      <div className="relative basis-1/2 flex justify-center max-h-52 md:max-h-full">
         <div
           id="contact-image-cover"
           className="absolute top-0 bg-white w-full h-full"
@@ -114,7 +117,7 @@ export default function Contact() {
           alt="Contact signs"
           width={600}
           height={0}
-          className="rounded-3xl"
+          className="md:rounded-3xl object-cover"
         />
       </div>
     </section>
