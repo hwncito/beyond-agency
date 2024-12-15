@@ -84,7 +84,7 @@ export default function Hero() {
         <div className="overflow-hidden leading-none">
           <h1
             id="hero-title"
-            className="text-8xl tracking-widest font-bold translate-y-full"
+            className="text-5xl sm:text-6xl md:text-8xl tracking-widest font-bold translate-y-full text-center"
             style={{ fontFamily: 'Bebas Neue' }}
           >
             Explore & Beyond
@@ -93,7 +93,7 @@ export default function Hero() {
         <div className="overflow-hidden leading-none mt-6 mb-8">
           <h2
             id="hero-subtitle"
-            className="text-4xl tracking-wide translate-y-full leading-normal"
+            className="text-3xl md:text-4xl tracking-wide translate-y-full leading-normal text-center text-balance"
           >
             Your Gateway to Unforgettable Journeys.
           </h2>
